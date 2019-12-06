@@ -39,12 +39,6 @@ def process(frame):
     #angle1, angle2 = calc_angle(hypotenuse1, horizontal1, vertical1, hypotenuse2, horizontal2, vertical2)
     #angleText(angle1, angle2, frame)
 
-<<<<<<< HEAD
-    #Show the final frame
-=======
-    #Show the final frames
->>>>>>> e5f28fd191a9ad48fad31918a569f8c5dbd3225e
-
     cv.imshow("Angle Detection", frame)
 
 
@@ -77,11 +71,7 @@ def normalize(frame):
 #in the image. Draw those contours around the object in green and return the list of contours.
 def contourCalc(thresh, frame):
 
-<<<<<<< HEAD
-    images, contours, hierarchy = cv.findContours(thresh, cv.RETR_LIST, cv.CHAIN_APPROX_SIMPLE)
-=======
     contours, hierarchy = cv.findContours(thresh, cv.RETR_LIST, cv.CHAIN_APPROX_SIMPLE)
->>>>>>> e5f28fd191a9ad48fad31918a569f8c5dbd3225e
     cv.drawContours(frame, contours, -1, (0, 255, 0), 3)
     return contours
 
