@@ -11,8 +11,19 @@ while(1):
 
     hsv = cv.cvtColor(frame, cv.COLOR_BGR2HSV)
 
-    lowerGreen = np.array([5, 50, 50])
-    upperGreen = np.array([25, 255, 255])
+    # meanLemon = np.array([[[83, 150, 166]]])
+    # stdLemon = np.array([[[22, 30, 32]]])
+
+    # lowerLemon = meanLemon - stdLemon
+    # upperLemon = meanLemon + stdLemon
+
+
+    # upperGreen = cv.cvtColor(np.uint8(upperLemon), cv.COLOR_BGR2HSV)[0,0,:]
+    # lowerGreen = cv.cvtColor(np.uint8(lowerLemon), cv.COLOR_BGR2HSV)[0,0,:]
+    # print(lowerLemon, upperLemon)
+
+    lowerGreen = np.array([15, 70, 70])
+    upperGreen = np.array([25, 150, 150])
 
     # lowerPink = np.arry([126, 50, 50])
     # upperPink = np.array([156, 255, 255])
@@ -25,7 +36,7 @@ while(1):
     #parameters: input, threshold value (used to classify pixel values), maxVal (value to assign if pixel is more or less than thresh val)
     ret, thresh = cv.threshold(maskGreen, 127, 255, cv.THRESH_BINARY)
 
-    image, contours, hierarchy = cv.findContours(thresh, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
+    contours, hierarchy = cv.findContours(thresh, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
 
     if len(contours) > 0:
         maxcontour = max(contours, key = cv.contourArea)
