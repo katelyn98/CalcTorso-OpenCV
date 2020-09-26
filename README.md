@@ -1,8 +1,8 @@
-# CV
-A repository for MLB rotation measurement project now, but a resource for general XProject computer vision code too.
+# CalcTorso-OpenCV
 
-The final driver code is in twoDifColors.py
+The main project is this project is titled as 
+### Using Object Tracking Techniques to Non-Invasively Measure Thoracic Rotation Range of Motion. 
 
-For code explanation of twoDifColors.py view the projects wiki page. 
+This work has been accepted at the Face and Gesture Analysis for Health Informatics Workshop at ACM ICMI 2020. 
 
 To test on a goniometer - run goniometerCV.py
